@@ -1,0 +1,163 @@
+/* General Styles (Common for Both Pages) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #6dd5ed, #2193b0);
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    min-height: 500px; /* Increased height */
+}
+
+/* Home Page Link Styling */
+.container a[href="index.html"] {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Links */
+a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Buttons */
+button {
+    width: calc(90% - 20px);
+    padding: 8px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px 10px;
+}
+
+button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Input Form Styles (Specific to index.html) */
+input, textarea, select {
+    width: calc(90% - 20px);
+    padding: 12px;
+    margin: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+select {
+    height: 40px;
+}
+
+/* Notice Board Styles (Specific to notices.html) */
+#noticeBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align notices to the left */
+    gap: 15px; /* Space between notices */
+    margin-top: 20px;
+}
+
+/* Single Notice Card */
+.notice-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    text-align: left;
+    word-wrap: break-word; /* Prevent text overflow */
+}
+
+.notice-card:hover {
+    transform: translateY(-5px);
+}
+
+.notice-card h3 {
+    margin-bottom: 5px;
+}
+
+.notice-card p {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.5;
+    white-space: pre-wrap; /* Preserve formatting for long text */
+}
+
+/* Buttons for Editing and Deleting */
+.notice-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.small-btn {
+    background: #007bff;
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.small-btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+.delete-btn {
+    background: #dc3545;
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}

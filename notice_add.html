@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📌 College Notice Board</title>
+    <link rel="stylesheet" href="style2.css" />
+    <style>
+      /* Styling the popup container */
+      .popup-container {
+        position: fixed;
+        top: 20%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-size: 16px;
+        display: none; /* Initially hidden */
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📢 Add a Notice</h1>
+      <form id="noticeForm">
+        <input type="text" id="title" placeholder="Enter Title 🖋️" required />
+        <textarea
+          id="description"
+          placeholder="Enter Description 📜"
+          rows="4"
+          required
+        ></textarea>
+        <select id="category" required>
+          <option value="exam">📖 Exam Notification</option>
+          <option value="suspension">🚫 Suspension</option>
+          <option value="event">🎉 Event</option>
+          <option value="holiday">🏖️ Holidays</option>
+        </select>
+        <button type="submit">➕ Add Notice</button>
+      </form>
+      <a href="notice_edit.html">📄 View Notices</a>
+      <a href="index.html">⬅ Go to home page</a>
+    </div>
+
+    <!-- Popup for success message -->
+    <div id="popup" class="popup-container">✅ Data Entered Successfully!</div>
+
+    <script>
+      // Smooth scroll when clicking on an anchor link
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        });
+      });
+
+      const noticeForm = document.getElementById("noticeForm");
+
+      noticeForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent form from submitting normally
+
+        const title = document.getElementById("title").value;
+        const description = document.getElementById("description").value;
+        const category = document.getElementById("category").value;
+
+        // Retrieve existing notices from localStorage or create a new array
+        let notices = JSON.parse(localStorage.getItem("notices")) || [];
+        notices.unshift({ title, description, category }); // Add new notice to the beginning
+        localStorage.setItem("notices", JSON.stringify(notices));
+
+        // Show the popup
+        const popup = document.getElementById("popup");
+        popup.style.display = "block"; // Show the popup
+        setTimeout(() => {
+          popup.style.display = "none"; // Hide the popup after 1 second
+        }, 1000); // 1000 milliseconds = 1 second
+
+        // Clear the form
+        noticeForm.reset();
+      });
+    </script>
+  </body>
+</html>

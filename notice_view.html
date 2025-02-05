@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📄 College Notice Board - Notices (Page 2)</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <h2>📌 College Notice Board (Page 2)</h2>
+        <div id="noticeBoard"></div>
+        <a href="index.html">⬅ Go to Home Page</a>
+    </div>
+
+    <script>
+        function displayNotices() {
+            let notices = JSON.parse(localStorage.getItem("notices")) || [];
+            let noticeBoard = document.getElementById("noticeBoard");
+
+            if (notices.length === 0) {
+                noticeBoard.innerHTML = "<p>😞 No notices available.</p>";
+                return;
+            }
+
+            noticeBoard.innerHTML = "";
+            notices.forEach((notice, index) => {
+                let categoryColors = {
+                    "exam": "#007bff",
+                    "suspension": "#dc3545",
+                    "event": "#28a745",
+                    "holiday": "#ffc107"
+                };
+
+                let noticeCard = document.createElement("div");
+                noticeCard.classList.add("notice-card");
+                noticeCard.style.borderColor = categoryColors[notice.category];
+
+                noticeCard.innerHTML = `
+                    <h3>${index + 1}. ${notice.title}</h3>
+                    <p>${notice.description}</p>
+                    <span>Category: ${notice.category}</span>
+                `;
+                noticeBoard.appendChild(noticeCard);
+            });
+        }
+
+        displayNotices();
+    </script>
+</body>
+</html>

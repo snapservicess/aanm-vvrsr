@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📄 College Notice Board - Notices</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="x-icon"  href="logo1.png">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h2>📌 College Notice Board</h2>
+        <div id="noticeBoard"></div>
+        <a href="index.html">🔙 Go Back</a>
+    </div>
+
+    <script>
+        function displayNotices() {
+            let notices = JSON.parse(localStorage.getItem("notices")) || [];
+            let noticeBoard = document.getElementById("noticeBoard");
+
+            if (notices.length === 0) {
+                noticeBoard.innerHTML = "<p>😞 No notices available.</p>";
+                return;
+            }
+
+            noticeBoard.innerHTML = "";
+            notices.forEach((notice, index) => {
+                let categoryColors = {
+                    "exam": "#007bff",
+                    "suspension": "#dc3545",
+                    "event": "#28a745",
+                    "holiday": "#ffc107"
+                };
+
+                let noticeCard = document.createElement("div");
+                noticeCard.classList.add("notice-card");
+                noticeCard.style.borderColor = categoryColors[notice.category];
+
+                noticeCard.innerHTML = `
+                    <h3>${notice.title}</h3>
+                    <p>${notice.description}</p>
+                    <div class="notice-buttons">
+                        <button class="small-btn" onclick="editTitle(${index})">✏️ Title</button>
+                        <button class="small-btn" onclick="editDescription(${index})">📝 Desc</button>
+                        <button class="delete-btn" onclick="deleteNotice(${index})">🗑️</button>
+                    </div>
+                `;
+                noticeBoard.appendChild(noticeCard);
+            });
+        }
+
+        function deleteNotice(index) {
+            let notices = JSON.parse(localStorage.getItem("notices")) || [];
+            notices.splice(index, 1);
+            localStorage.setItem("notices", JSON.stringify(notices));
+            displayNotices();
+        }
+
+        function editTitle(index) {
+            let notices = JSON.parse(localStorage.getItem("notices")) || [];
+            let newTitle = prompt("✏️ Edit Title:", notices[index].title);
+
+            if (newTitle) {
+                notices[index].title = newTitle;
+                localStorage.setItem("notices", JSON.stringify(notices));
+                displayNotices();
+            }
+        }
+
+        function editDescription(index) {
+            let notices = JSON.parse(localStorage.getItem("notices")) || [];
+            let newDescription = prompt("📝 Edit Description:", notices[index].description);
+
+            if (newDescription) {
+                notices[index].description = newDescription;
+                localStorage.setItem("notices", JSON.stringify(notices));
+                displayNotices();
+            }
+        }
+
+        displayNotices();
+    </script>
+</body>
+</html>
