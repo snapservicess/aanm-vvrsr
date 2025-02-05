@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #6A11CB, #2575FC);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 400px;
+      transition: all 0.3s ease;
+    }
+    .login-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      margin-top: -20px;  /* Remove top margin */
+      margin-bottom: 30px;
+      font-size: 24px;
+      color: #333;
+      font-weight: 600;
+    }
+    input {
+      width: calc(100% - 24px);
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #f7f7f7;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    input:focus {
+      border-color: #2575FC;
+      outline: none;
+      box-shadow: 0 0 5px rgba(37, 117, 252, 0.6);
+      background-color: #fff;
+    }
+    button {
+      background-color: #2575FC;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #6A11CB;
+      transform: translateY(-5px);
+    }
+    button:active {
+      transform: translateY(2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>🔑 Admin Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Enter Username" required />
+      <input type="password" id="password" placeholder="Enter Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Validate credentials
+      if (username === "charan" && password === "1234") {
+        // Redirect to notice_add.html
+        window.location.href = "notice_add.html";
+      } else {
+        // Redirect to home page (index.html)
+        alert("Invalid username or password! Redirecting to home page...");
+        window.location.href = "home.html";
+      }
+    });
+  </script>
+</body>
+</html>

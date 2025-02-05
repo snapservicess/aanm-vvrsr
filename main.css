@@ -1,0 +1,305 @@
+/* General Styling */
+body {
+  background: linear-gradient(90deg, #ffffff,#fdd3a2);
+  color: #010918; /* Rich dark navy text */
+    font-family: 'Poppins', sans-serif;
+     margin-top: 80px;
+    margin-bottom: 0;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+
+
+  /*index*/
+  .change:hover{
+    transform: scale(1.1);
+
+  }
+  .con1{
+    position: relative;
+    width:50%;
+  }
+  .imgg{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .overlay{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width:100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008cba;
+    border-radius: 10px;
+  }
+  .con1:hover .overlay{
+    opacity: 1;
+  }
+  .text{
+    color: white;
+    position: absolute;
+    text-align: auto;
+    margin-top: 5%;
+   
+    
+  }
+  .navbar-custom {
+    background-color: #343a40; /* Dark grey color */
+  }
+  .text-custom {
+    color: #2F4F4F; /* Dark Slate Gray */
+  }
+
+  /* Fade-in effect for the body */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #Navigation{ background: linear-gradient(90deg, rgba(58,26,173), rgb(0, 34, 255));
+    border-radius: 5x; 
+    height: 80px; 
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 10px 20px; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000;
+  }
+  /* Navbar animation */
+  .navbar {
+    animation: slideDown 1s ease-in-out;
+  }
+  
+  /* Slide down effect for the navbar */
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for images in .con1 */
+  .con1 {
+    position: relative;
+    width: 50%;
+    opacity: 0;
+    animation: fadeInImage 2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInImage {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for text inside images */
+  .text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInText 2s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+  
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Footer opacity animation */
+  footer {
+    opacity: 0.1;
+    animation: fadeInFooter 1.5s ease-in-out forwards;
+    animation-delay: 2s;
+  }
+  
+  .footer{
+    background-color: rgb(14, 14, 131); /* Deep blue with slight transparency */
+    color: white; 
+    padding: 20px 0;
+  }
+
+  @keyframes fadeInFooter {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Add an animation to the quick links section in footer */
+  footer .container ul {
+    animation: fadeInQuickLinks 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes fadeInQuickLinks {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Slide-in effect for the map in footer */
+  iframe {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInMap 1.5s ease-in-out forwards;
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes slideInMap {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .carousel-inner .carousel-item img{
+    height: 50%;
+  }
+  #nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #nav ul li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  footer {
+    padding: 2rem;
+  }
+
+  /* Adjust navigation image */
+#Navigation img {
+  position: absolute;
+  top: 15px; /* Move image up */
+  left: 5px; /* Move image to the left corner */
+  height: 50px; /* Reduce height */
+  width: auto; /* Maintain aspect ratio */
+}
+
+
+/* Highlight active menu item */
+.nav-item {
+  background-color: #2d5cdd; /* Highlight color */
+  color: #ffffff; /* Text color */
+  border-radius: 10px;
+  justify-content: center;
+  margin-bottom: 2px;
+  padding: 5px; /* Add padding for better spacing */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Add this to your existing CSS */
+.dropdown-menu {
+  max-height: 100px; /* Set the maximum height for the dropdown menu */
+  overflow-y: auto; /* Enable vertical scrolling */
+  -webkit-line-clamp: 3; /* Display only 3 items */
+}
+
+.collapse{
+ margin-left: 60%;
+  margin-top: 25px;
+  
+}
+.dropdown-menu{
+  color: #2d5cdd;
+}
+
+.flip-card{
+  background-color: transparent;
+  width: 300px;
+  height: 270px;
+  perspective: 1000px;
+}
+.flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front{
+  background-color: #bbb;
+  color:black;
+  border-radius: 5px;
+}
+.flip-card-back{
+  background-color: #2980b9;
+  color:white;
+  border-radius: 5px;
+  transform:rotateY(180deg);
+}
+
+
+}
+
+
+

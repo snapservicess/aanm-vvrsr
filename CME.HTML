@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AANM&VVRSR POLYTECHNIC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <style>
+
+   #body{
+      border:double 4px black ;
+    }
+    .flip-card{
+                background-color: transparent;
+                width: 300px;
+                height: 270px;
+                perspective: 1000px;
+        }
+        .flip-card-inner{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        .flip-card:hover .flip-card-inner{
+                transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back{
+                position: absolute;
+                width: 100%;
+                height:100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        }
+        .flip-card-front{
+                background-color: #bbb;
+                color:black;
+                border-radius: 5px;
+        }
+        .flip-card-back{
+                background-color: #2980b9;
+                color:white;
+                border-radius: 5px;
+                transform:rotateY(180deg);
+        }
+  </style>
+  <link rel="shortcut icon" type="x-icon"  href="logo1.png">
+</head>
+<body> 
+  <nav class="navbar navbar-expand-sm navbar-dark" id="Navigation">
+ <div>
+  <img src="logo1.png" height="80px" width="160px"/>
+ </div>
+ 
+  <div class="container">
+    <a class="navbar-brand" href="#" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a class="nav-link" href="Index.html" style="color:white;">HOME</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:white;">ADMINISTRATION</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="chairman.html">CHAIRMAN</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="mentor.html">EXECUTIVE MENTOR</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="principal.html">PRINCIPAL</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="admin_incharge.html">ACADEMIC INCHARGE</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:white;">DEPARTMENTS</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="AIML.html">AIML</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="CIVIL.html">CIVIL</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="CME.HTML">COMPUTERS</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="CMIOT.html">CM-IOT</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="ECE (1).html">ECE</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="EEE.html">EEE</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="MECH.html">MECH</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:white;" >FACULTY</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="aiml_faculty.html">AIML</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="civil_faculty.html">CIVIL</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="cme_faculty.html">COMPUTERS</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="cmi_faculty.html">CM-IOT</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="ece_faculty.html">ECE</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="eee_faculty.html">EEE</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="mech_faculty.html">MECH</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="AWARDS.html" style="color:white;">AWARDS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="placements.html" style="color:white;">PLACEMENTS</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:white;">LABS</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="aiml_lab.html">AIML</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="civil_lab.html">CIVIL</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="cme_lab.html">COMPUTERS</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="cmi_lab.html">CM-IOT</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="ece_lab.html">ECE</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="eee_lab.html">EEE</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="mech_lab.html">MECH</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:white;">SPORTS</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="games.html">SPORTS</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="rewards.html">REWARDS</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="notices2.html" style="color:white;">NOTICES</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </nav> 
+
+<br>
+<div id="body" class="container">
+    <h1 style="color:crimson;">COMPUTER ENGINEERING:</h1>
+    <hr>
+   <div><p > <img  align="left" src="cme.jpg" class="rounded img-fluid" style="height: 280px;width: 420px;"><p>Computer engineers require training in electronic engineering, computer science, hardware-software integration, software design, and software engineering.</p>
+    <p>It uses the techniques and principles of electrical engineering and computer science, and can encompass areas such as artificial intelligence (AI), robotics, computer networks, computer architecture and operating systems.
+    Computer engineers are involved in many hardware and software aspects of computing, from the design of individual microcontrollers, microprocessors, personal computers, and supercomputers, to circuit design.</p>
+   <p> This field of engineering not only focuses on how computer systems themselves work, but also on how to integrate them into the larger picture.
+    Robotics are one of the applications of computer engineering.</p></p>
+    </div><br><br>
+    <div style="display:flex;">
+        <div class="flip-card" style="margin-left: auto;">
+          <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                       <h2 style="text-align: center;margin-top: 100px;">VISION</h2> 
+                  </div>
+                  <div class="flip-card-back">
+                    <p style="margin-top:90px;text-align: center;">
+                        To develop a strong theoretical and practical background across the computer science discipline with an emphasis on problem solving.</p>     
+                  </div>
+      
+          </div>
+          </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="flip-card" style="margin-right:auto ;" >
+            <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                         <h2 style="text-align: center;margin-top: 100px;">MISSION</h2> 
+                    </div>
+                    <div class="flip-card-back">
+                      <p style="margin-top:85px;text-align: center;">
+                        The Computer Science & Engineering aims at providing continuously stimulating educational environment to its students for attaining their professional goals and meet the global challenges. </p>   
+                    </div>
+        
+            </div>
+            </div>
+      </div><br><br>
+      <div>
+        <p>
+            <img align="right" src="cme1.jpg" class="rounded img-fluid" style="height: 300px;width: 450px;"><div><p>There are 990 students in computer branch including all the 3 years.There are total 30 faculty members in the department.It is the One which gots number of ECET ranks every year widely.The students becoming bright because of the highly expericened and well educated faculty members.</p>
+            <p>
+           <ul style="list-style-type: none;"><li><b><u> Career Opportunities</u></b></li>
+           <li> Graduates in computer engineering can pursue careers in:</li>
+            <li>Software Development: Creating applications and systems software.</li>
+            <li>Hardware Engineering: Designing and testing hardware components.</li>
+            <li>Systems Engineering: Overseeing the integration of complex systems.</li>
+            <li>Network Engineering: Designing and managing computer networks.</li>
+            <li>Embedded Systems Development: Working on devices like smartphones, medical devices, and automotive systems.</li></ul></p>
+            </p></div>
+    </div>
+</div><br>
+<div class="footer">
+  <!-- Footer Container -->
+  
+
+  <!-- Social Media & Contact Section -->
+  <div style="text-align: center; color: white; margin-top: 0px;">
+    <h4 style="color: orange;">Follow us on Social Media</h4>
+    <div style="font-size: 2rem; margin: 10px 0;">
+      <a href="https://youtube.com/@aanmvvrsrpolytechnicgudlav5236?si=SpFIUpGFpWUxCKI4" target="_blank" style="color: inherit;"><i class='bx bxl-youtube' style="margin-right: 15px;"></i></a>
+      <a href="https://www.facebook.com/poly.gvl?mibextid=ZbWKwL" target="_blank" style="color: inherit;"><i class='bx bxl-facebook' style="margin-right: 15px;"></i></a>
+      <a href="https://www.instagram.com/aanm.vvrsr.polytechnic?igsh=MXQ3ZjJjNTMwdXQ4YQ==" target="_blank" style="color: inherit;"><i class='bx bxl-instagram' style="margin-right: 15px;"></i></a>
+      <a href="https://x.com/AANMVVRSRPOLY?t=Ys4rM0spInAwhhYY6bFgmg&s=08" target="_blank" style="color: inherit;"><i class='bx bxl-twitter'></i></a>
+    </div>
+    <h5>&diams; Phone Numbers: <span ondblclick="copyPhoneNumber()">9912342030</span></h5>
+    <p id="copyMessagePhone" style="color: rgb(255, 198, 198); display: none;">Phone number copied to clipboard!</p>
+
+    <h5>&diams; Email: <span ondblclick="copyEmail()">poly.gvl@gmail.com</span></h5>
+    <p id="copyMessageEmail" style="color: rgb(255, 198, 198); display: none;">Email copied to clipboard!</p>
+
+    <script>
+      function copyPhoneNumber() {
+      const phoneNumber = "9912342030";
+      navigator.clipboard.writeText(phoneNumber).then(() => {
+        document.getElementById('copyMessagePhone').style.display = 'block';
+        setTimeout(() => {
+        document.getElementById('copyMessagePhone').style.display = 'none';
+        }, 2000);
+      });
+      }
+
+      function copyEmail() {
+      const email = "poly.gvl@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        document.getElementById('copyMessageEmail').style.display = 'block';
+        setTimeout(() => {
+        document.getElementById('copyMessageEmail').style.display = 'none';
+        }, 2000);
+      });
+      }
+    </script>
+    </div>
+
+  <hr style="border: 3px solid white; background: transparent;">
+
+  <!-- Copyright Section -->
+  <div style="text-align: center;">
+    <h6>Copyright <i class='bx bx-copyright'></i> 2025 All Rights Reserved. A.A.N.M & V.V.R.S.R Polytechnic</h6>
+  </div>
+</div>
+
+  
+  </body>
+  </html>
+  
