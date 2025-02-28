@@ -48,6 +48,32 @@
                 border-radius: 5px;
                 transform:rotateY(180deg);
         }
+        .navbar {
+  background-color: #003366;
+}
+
+.navbar .nav-link {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ffebcd;
+}
+
+.navbar .dropdown-menu {
+  background-color: #003366;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #ffebcd;
+  color: #003366;
+}
   </style>
   
   <link rel="shortcut icon" type="x-icon"  href="logo1.png">
@@ -89,53 +115,37 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:white;">DEPARTMENTS</a>
         <ul class="dropdown-menu">
-          <li>
-            <a class="dropdown-item" href="AIML.html">AIML</a>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">FACULTY</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="aiml_faculty.html">AIML</a></li>
+              <li><a class="dropdown-item" href="civil_faculty.html">CIVIL</a></li>
+              <li><a class="dropdown-item" href="cme_faculty.html">COMPUTERS</a></li>
+              <li><a class="dropdown-item" href="cmi_faculty.html">CM-IOT</a></li>
+              <li><a class="dropdown-item" href="ece_faculty.html">ECE</a></li>
+              <li><a class="dropdown-item" href="eee_faculty.html">EEE</a></li>
+              <li><a class="dropdown-item" href="mech_faculty.html">MECH</a></li>
+            </ul>
           </li>
-          <li>
-            <a class="dropdown-item" href="CIVIL.html">CIVIL</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="CME.HTML">COMPUTERS</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="CMIOT.html">CM-IOT</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="ECE (1).html">ECE</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="EEE.html">EEE</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="MECH.html">MECH</a>
-          </li>
+          <li><a class="dropdown-item" href="AIML.html">AIML</a></li>
+          <li><a class="dropdown-item" href="CIVIL.html">CIVIL</a></li>
+          <li><a class="dropdown-item" href="CME.HTML">COMPUTERS</a></li>
+          <li><a class="dropdown-item" href="CMIOT.html">CM-IOT</a></li>
+          <li><a class="dropdown-item" href="ECE (1).html">ECE</a></li>
+          <li><a class="dropdown-item" href="EEE.html">EEE</a></li>
+          <li><a class="dropdown-item" href="MECH.html">MECH</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:white;" >FACULTY</a>
+        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color:white;">STUDENTS</a>
         <ul class="dropdown-menu">
-          <li>
-            <a class="dropdown-item" href="aiml_faculty.html">AIML</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="civil_faculty.html">CIVIL</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="cme_faculty.html">COMPUTERS</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="cmi_faculty.html">CM-IOT</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="ece_faculty.html">ECE</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="eee_faculty.html">EEE</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="mech_faculty.html">MECH</a>
-          </li>
+           <li><a class="dropdown-item" href="https://polyelearning.gnomio.com/enrol/index.php?id=43">CIVIL</a></li>
+          <li><a class="dropdown-item" href="https://polyelearning.gnomio.com/course/view.php?id=40">COMPUTERS</a></li>
+          <li><a class="dropdown-item" href="#">CM-IOT</a></li>
+          <li><a class="dropdown-item" href="https://polyelearning.gnomio.com/enrol/index.php?id=41">ECE</a></li>
+          <li><a class="dropdown-item" href=" https://polyelearning.gnomio.com/enrol/index.php?id=44">EEE</a></li>
+          <li><a class="dropdown-item" href="https://polyelearning.gnomio.com/enrol/index.php?id=45">MECH</a></li>
+          <li><a class="dropdown-item" href="https://polyelearning.gnomio.com/enrol/index.php?id=5">SYLLABUS COPIES</a></li>
         </ul>
       </li>
       <li class="nav-item">
@@ -188,6 +198,18 @@
   </div>
   </div>
   </nav> 
+  <script>
+    // Add this JavaScript to handle the nested dropdown toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.dropdown-submenu a.dropdown-toggle').forEach(function (element) {
+        element.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          element.nextElementSibling.classList.toggle('show');
+        });
+      });
+    });
+  </script>
 <br>
 <div class="container" id="body">
   <h1 style="color:crimson;">COMPUTER ENGINEERING AND INTERNET OF THINGS:</h1>
