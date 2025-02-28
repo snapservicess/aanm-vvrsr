@@ -305,7 +305,7 @@ body {
   }
   .flip-card-front{
     background-color: #bbb;
-    color:black;
+    color:rgb(4, 4, 4);
     border-radius: 5px;
   }
   .flip-card-back{
@@ -341,7 +341,6 @@ body {
   }
   
   .dropdown-menu .dropdown-submenu > a::after {
-    content: ">";
     float: right;
     margin-left: 10px;
   }
