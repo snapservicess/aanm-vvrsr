@@ -1,51 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📄 College Notice Board - Notices (Page 2)</title>
-    <link rel="stylesheet" href="style1.css">
-</head>
-<body>
-    <div class="container">
-        <h2>📌 College Notice Board </h2>
-        <div id="noticeBoard"></div>
-        <a href="index.html"> Home Page</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📌 College Notice Board</title>
+    <link rel="stylesheet" href="style2.css" />
+    <style>
+      /* Styling the popup container */
+      .popup-container {
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-size: 16px;
+        display: none; /* Initially hidden */
+        z-index: 1000;
+      }
+      /* Styling for the marquee container */
+      .marquee-container {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #ffeb3b;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+ 
+
+    <!-- Popup for success message -->
+    <div id="popup" class="popup-container">✅ Data Entered Successfully!</div>
+
+    <!-- Marquee Notice Display -->
+    <div class="marquee-container">
+      <marquee id="marqueeText" behavior="scroll" direction="left">
+        No new notices yet.
+      </marquee>
     </div>
 
     <script>
-        function displayNotices() {
-            let notices = JSON.parse(localStorage.getItem("notices")) || [];
-            let noticeBoard = document.getElementById("noticeBoard");
+      const noticeForm = document.getElementById("noticeForm");
+      const marqueeText = document.getElementById("marqueeText");
 
-            if (notices.length === 0) {
-                noticeBoard.innerHTML = "<p>😞 No notices available.</p>";
-                return;
-            }
-
-            noticeBoard.innerHTML = "";
-            notices.forEach((notice, index) => {
-                let categoryColors = {
-                    "exam": "#007bff",
-                    "suspension": "#dc3545",
-                    "event": "#28a745",
-                    "holiday": "#ffc107"
-                };
-
-                let noticeCard = document.createElement("div");
-                noticeCard.classList.add("notice-card");
-                noticeCard.style.borderColor = categoryColors[notice.category];
-
-                noticeCard.innerHTML = `
-                    <h3>${index + 1}. ${notice.title}</h3>
-                    <p>${notice.description}</p>
-                    <span>Category: ${notice.category}</span>
-                `;
-                noticeBoard.appendChild(noticeCard);
-            });
+      // Function to update marquee with stored notices
+      function updateMarquee() {
+        let notices = JSON.parse(localStorage.getItem("notices")) || [];
+        if (notices.length > 0) {
+          marqueeText.innerHTML = notices
+            .map(
+              (notice) =>
+                `📌 <strong>${notice.title}</strong>: ${notice.description} (${notice.category.toUpperCase()})`
+            )
+            .join(" | ");
+        } else {
+          marqueeText.innerHTML = "No new notices yet.";
         }
+      }
 
-        displayNotices();
+      // Load notices into marquee on page load
+      document.addEventListener("DOMContentLoaded", updateMarquee);
+
+      noticeForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent form from submitting normally
+
+        const title = document.getElementById("title").value;
+        const description = document.getElementById("description").value;
+        const category = document.getElementById("category").value;
+
+        // Retrieve existing notices from localStorage or create a new array
+        let notices = JSON.parse(localStorage.getItem("notices")) || [];
+        notices.unshift({ title, description, category }); // Add new notice to the beginning
+        localStorage.setItem("notices", JSON.stringify(notices));
+
+        // Update marquee with new notices
+        updateMarquee();
+
+        // Show the popup
+        const popup = document.getElementById("popup");
+        popup.style.display = "block"; // Show the popup
+        setTimeout(() => {
+          popup.style.display = "none"; // Hide the popup after 1 second
+        }, 1000); // 1000 milliseconds = 1 second
+
+        // Clear the form
+        noticeForm.reset();
+      });
     </script>
-</body>
+  </body>
 </html>
