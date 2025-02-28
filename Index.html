@@ -15,7 +15,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" id="Navigation">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="logo1.png" height="80px" width="160px" alt="Logo"/>
+        <img src="logo1.png" height="80px" width="160px"  alt="Logo"/>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -92,19 +92,7 @@
         </ul>
       </div>
     </div>
-  </nav>
-  <script>
-    // Add this JavaScript to handle the nested dropdown toggle
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('.dropdown-submenu a.dropdown-toggle').forEach(function (element) {
-        element.addEventListener('click', function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          element.nextElementSibling.classList.toggle('show');
-        });
-      });
-    });
-  </script> 
+  </nav> 
 <div id="demo" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
@@ -142,7 +130,7 @@
     }
   </style>
   <div class="container text-custom">
-<h1 align="center">Welcome to A.A.N.M. & V.V.R.S.R. Polytechnic</h1>
+    <h1 style="text-align:center; color:firebrick">Welcome to A.A.N.M. & V.V.R.S.R. Polytechnic</h1>
 <style>
   .carousel-item img {
     width: 80%; /* Ensure the image takes the full width */
@@ -153,8 +141,8 @@
 <p style="text-align: left;">A. A. N. M. & V. V. R. S. R. Polytechnic is a polytechnic located in Gudlavalleru village, Krishna District, Andhra Pradesh, India. It is affiliated to the Andhra Pradesh State Board of Technical Education and Training, Hyderabad. The polytechnic is approved by the All India Council for Technical Education</p>
 <p style="text-align: left;">Our A.A.N.M. & V.V.R.S.R. Polytechnic came into existence on 13th November, 1981 under the sponsorship of A.A.N.M. & V.V.R.S.R. Educational Society with a purpose of contribute in its might to the national policy of education and empowerment of the second largest population of the earth. The Father of the Nation emphasized the need of strengthening villages where India line and it can be done only when the millions of rural Indians have access to the latest advancements of Science and Technology. Our Polytechnic has been trying to put its faith of Gandhi into practice for the last 43+ years and successfully moulding the youth of rural students into the knowledgeable, practically viable, efficient and adaptable work force of engineering. An exemplary synthesis in thought and deed among the management, Principal, faculty and students have been the key-factor of fine victories.</p></div>
   <div class="container text-custom">
-<h1 align="center">HISTORY</h1>
-<p style="text-align: left;">The Society was established on 31st March 1981, mainly with the efforts of Late Sri Adusumilli Aswardha Narayana Murthy and Late Sri Vallurupalli Venkata Rama Seshadri Rao with the main objective of establishing, aiding and maintaining Technical, Engineering and general educational institutions.</p>
+    <h1  style="text-align:left;margin-left: 230px; color:firebrick">HISTORY</h1>
+    <p style="text-align: left;">The Society was established on 31st March 1981, mainly with the efforts of Late Sri Adusumilli Aswardha Narayana Murthy and Late Sri Vallurupalli Venkata Rama Seshadri Rao with the main objective of establishing, aiding and maintaining Technical, Engineering and general educational institutions.</p>
 
 <p style="text-align: left;">In the year 1981, the Society was established the Adusumilli Aswardha Narayana Murthy and Vallurupalli Venkata Rama Seshadri Rao (AANM & VVRSR) Polytechnic with an intake of 180 students. Today, the Polytechnic has an intake of 1320 students and is the first choice of many students seeking admission in private polytechnics through CEEP.</p>
 
@@ -164,40 +152,30 @@
 <div>
   <h2 style="color:blueviolet" class="container">Our recruiters</h2><br>
   <div>
-    <div style="display:flex" class="container">
-      <div id="img1" class="container con1">
+    <div style="display:flex; " class="container">
+      <div id="img1" class="container con1" >
       <img src="Thought.png" alt=""  class="change rounded imgg float-left" >
       <div class="overlay">
-        <div class="text">
-            The company is closely associated with the movement for agile software development,and has contributed to open source products.Thoughtworks business includes Digital product development services,Digital experience and Distributed Agile software development.
-        </div>
+        <div class="text" onresize="fun1()"> 
+            The company is closely associated with the movement for agile software development, and has contributed to open source products. Thoughtworks business includes Digital product development services, Digital experience and Distributed Agile software development.
+          </div>
+          <style>
+            .text {
+            color: black;
+            }
+          </style>
       </div>
     </div>
-    <div id="img2" class="con1">
+    <div id="img2" class="con1" >
       <img src="Medha.png" alt="" class="change rounded float-right imgg" >
-      <div class="overlay">
-        <div class="text" onresize="fun1()">
-          Medha is a global leader in railway technology specializing in electric propulsion suite of products ranging from traction motors, traction converters, auxiliary power converters, train control management system, energy optimization solutions, onboard rollingstock electronics.
-        </div>
-      </div>
       </div>
     </div><br><br><br><br>
     <div style="display:flex;" class="container">
-      <div id="img1" class="container con1">
-      <img src="Amararaja.jpg" alt=""  class="change rounded float-left imgg" >
-      <div class="overlay">
-        <div class="text">
-          Amara Raja Energy & Mobility is India’s largest automotive batteries and allied products manufacturer with brands that are the preferred choice with retail customers as well as OEMs. The products are exported to over 50 countries worldwide.
-        </div>
-      </div>
+      <div id="img1" class="container con1" >
+      <img src="Amararaja.jpg" alt=""  class="change rounded float-left imgg" >       
     </div>
-    <div id="img2" class="con1">
+    <div id="img2" class="con1"  >
       <img src="kalpa.jpg" alt="" class="change rounded float-right imgg" >
-      <div class="overlay">
-        <div class="text">
-          Kalpataru Projects International Limited (KPIL) is one of the largest Engineering and Construction companies listed in India, with a diversified portfolio of projects worldwide, in Power Transmission & Distribution (T&D), Buildings & Factories, Water Supply & Irrigation.  
-        </div>
-      </div>
       </div>
     </div>
   </div>
