@@ -15,7 +15,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" id="Navigation">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="logo1.png" height="80px" width="160px" alt="Logo"/>
+        <img src="logo1.png" height="80px" width="160px"  alt="Logo"/>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -93,7 +93,7 @@
       </div>
     </div>
   </nav> 
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
+<div id="demo" class="carousel slide" data-bs-ride="carousel" style="padding: 10px;">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
@@ -152,16 +152,21 @@
 <div>
   <h2 style="color:blueviolet" class="container">Our recruiters</h2><br>
   <div>
-    <div style="display:flex" class="container">
-      <div id="img1" class="container con1">
+    <div style="display:flex; " class="container">
+      <div id="img1" class="container con1" style="overflow: scroll;">
       <img src="Thought.png" alt=""  class="change rounded imgg float-left" >
       <div class="overlay">
-        <div class="text">
-            The company is closely associated with the movement for agile software development,and has contributed to open source products.Thoughtworks business includes Digital product development services,Digital experience and Distributed Agile software development.
-        </div>
+        <div class="text" onresize="fun1()"> 
+            The company is closely associated with the movement for agile software development, and has contributed to open source products. Thoughtworks business includes Digital product development services, Digital experience and Distributed Agile software development.
+          </div>
+          <style>
+            .text {
+            color: black;
+            }
+          </style>
       </div>
     </div>
-    <div id="img2" class="con1">
+    <div id="img2" class="con1" style="overflow: scroll;">
       <img src="Medha.png" alt="" class="change rounded float-right imgg" >
       <div class="overlay">
         <div class="text" onresize="fun1()">
@@ -171,7 +176,7 @@
       </div>
     </div><br><br><br><br>
     <div style="display:flex;" class="container">
-      <div id="img1" class="container con1">
+      <div id="img1" class="container con1" style="overflow: scroll;">
       <img src="Amararaja.jpg" alt=""  class="change rounded float-left imgg" >
       <div class="overlay">
         <div class="text">
@@ -179,7 +184,7 @@
         </div>
       </div>
     </div>
-    <div id="img2" class="con1">
+    <div id="img2" class="con1" style="overflow: scroll;">
       <img src="kalpa.jpg" alt="" class="change rounded float-right imgg" >
       <div class="overlay">
         <div class="text">
