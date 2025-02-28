@@ -234,113 +234,114 @@ body {
 }
 
 
-/* Highlight active menu item */
-.nav-item {
-  background-color: #2d5cdd; /* Highlight color */
-  color: #ffffff; /* Text color */
-  border-radius: 10px;
-  justify-content: center;
-  margin-bottom: 2px;
-  padding: 5px; /* Add padding for better spacing */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-
-/* Add this to your existing CSS */
-.dropdown-menu {
-  max-height: 100px; /* Set the maximum height for the dropdown menu */
-  overflow-y: auto; /* Enable vertical scrolling */
-  -webkit-line-clamp: 3; /* Display only 3 items */
-  line-clamp: 3; /* Display only 3 items */
-}
-
-.collapse{
- margin-left: 60%;
-  margin-top: 25px;
+  /* Highlight active menu item */
+  .nav-item {
+    background-color: #2d5cdd; /* Highlight color */
+    color: #ffffff; /* Text color */
+    border-radius: 10px;
+    justify-content: center;
+    margin-bottom: 2px;
+    padding: 5px; /* Add padding for better spacing */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  }
   
-}
-.dropdown-menu{
-  color: #2d5cdd;
-}
-
-.flip-card{
-  background-color: transparent;
-  width: 300px;
-  height: 270px;
-  perspective: 1000px;
-}
-.flip-card-inner{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-.flip-card:hover .flip-card-inner{
-  transform: rotateY(180deg);
-}
-.flip-card-front, .flip-card-back{
-  position: absolute;
-  width: 100%;
-  height:100%;
-  -webkit-backface-visibility: hidden;
-
-.flip-card-front{
-  background-color: #bbb;
-  color:black;
-  border-radius: 5px;
-}
-.flip-card-back{
-  background-color: #2980b9;
-  color:white;
-  border-radius: 5px;
-  transform:rotateY(180deg);
-}
-
-backface-visibility: hidden;
-}
-.flip-card-front{
-  background-color: #bbb;
-  color:black;
-  border-radius: 5px;
-}
-.flip-card-back{
-  background-color: #2980b9;
-  color:white;
-  border-radius: 5px;
-  transform:rotateY(180deg);
-}
-
-/* Add this to your CSS file */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -1px;
-  display: none;
-}
-
-.dropdown-submenu:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu > li > a {
-  padding: 10px 20px;
-  color: #333;
-}
-
-.dropdown-menu > li > a:hover {
-  background-color: #f8f9fa;
-  color: #000;
-}
-
-.dropdown-menu .dropdown-submenu > a::after {
-  content: ">";
-  float: right;
-  margin-left: 10px;
-}
-}
+  /* Add this to your existing CSS */
+  .dropdown-menu {
+    max-height: 100px; /* Set the maximum height for the dropdown menu */
+    overflow-y: auto; /* Enable vertical scrolling */
+    -webkit-line-clamp: 3; /* Display only 3 items */
+    line-clamp: 3; /* Display only 3 items */
+  }
+  
+  .collapse{
+   margin-left: 60%;
+    margin-top: 25px;
+    
+  }
+  .dropdown-menu{
+    color: #2d5cdd;
+  }
+  
+  .flip-card{
+    background-color: transparent;
+    width: 300px;
+    height: 270px;
+    perspective: 1000px;
+  }
+  .flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  .flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-card-front{
+    background-color: #bbb;
+    color:black;
+    border-radius: 5px;
+  }
+  .flip-card-back{
+    background-color: #2980b9;
+    color:white;
+    border-radius: 5px;
+    transform:rotateY(180deg);
+  }
+  
+  }
+  .flip-card-inner {
+    backface-visibility: hidden;
+  }
+  .flip-card-front{
+    background-color: #bbb;
+    color:black;
+    border-radius: 5px;
+  }
+  .flip-card-back{
+    background-color: #2980b9;
+    color:white;
+    border-radius: 5px;
+    transform:rotateY(180deg);
+  }
+  
+  /* Add this to your CSS file */
+  .dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+  }
+  
+  .dropdown-submenu:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu > li > a {
+    padding: 10px 20px;
+    color: #333;
+  }
+  
+  .dropdown-menu > li > a:hover {
+    background-color: #f8f9fa;
+    color: #000;
+  }
+  
+  .dropdown-menu .dropdown-submenu > a::after {
+    content: ">";
+    float: right;
+    margin-left: 10px;
+  }
